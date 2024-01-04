@@ -4,11 +4,11 @@
 
 # 코드
 ```
-  #include <iostream> 
+#include <iostream> 
 
-  int main(){
-      std::cout << "Hello World!"; 
-  } 
+int main(){
+    std::cout << "Hello World!"; 
+} 
 ```
 # 풀이
 
