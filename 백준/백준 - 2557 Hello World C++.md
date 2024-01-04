@@ -3,11 +3,13 @@
   Hello World!를 출력하시오.
 
 # 코드
-'''#include <iostream> 
-using namespace std;
+'''
+#include <iostream> 
+
 int main(){
-    cout << "Hello World!"; 
-} '''
+    std::cout << "Hello World!"; 
+} 
+'''
 # 풀이
 
  
