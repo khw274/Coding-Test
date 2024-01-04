@@ -2,7 +2,7 @@
 
 코딩테스트 대비
 
-해당 블로그 적극 참고: https://haesoo9410.tistory.com/351
+해당 블로그 참고: https://haesoo9410.tistory.com/351
 
 ## 공부계획
 
