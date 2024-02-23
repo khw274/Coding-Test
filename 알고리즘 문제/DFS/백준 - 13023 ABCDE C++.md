@@ -31,6 +31,63 @@ D는 E와 친구다.
 ```
 ## 코드 풀이
 ```
+#include <iostream>
+#include <vector>
+using namespace std;
 
+static vector<vector <int> > a;  // static 멤버 변수로 그래프 데이터 저장 인접 리스트를 넣을 이중 vector문 선언
+static vector<bool> visited;  // 방문 기록 저장 배열
+static bool arrive;  // 도착 확인 변수
+void DFS(int now, int depth);  // DFS 함수 선언
+
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+
+    int n, m;
+    cin >> n >> m;
+    
+    // 초기화
+    arrive = false;
+    a.resize(n);  
+    visited = vector<bool>(n, false);
+        
+    for(int i = 0; i < m; i++){
+        int s, e;
+        cin >> s >> e;
+        
+        // 양방향 저장
+        a[s].push_back(e);  // 2차원 배열을 생각하면서 넣어줌
+        a[e].push_back(s);
+    }
+    
+    for(int i = 0; i < n; i++){
+        DFS(i, 1);
+        if(arrive) break;
+    }
+    
+    if(arrive){
+        cout << 1 << '\n';
+    }
+    else{
+        cout << 0 << '\n';
+    }
+}    
+
+void DFS(int now, int depth){
+    if(depth == 5 || arrive){
+        arrive = true;
+        return;
+    }
+    visited[now] = true;
+    
+    for(int i : a[now]){  
+        if(!visited[i]){  // 방문하지 않았다면, visited = false
+            DFS(i, depth + 1);
+        }
+    }
+    visited[now] = false;   
+}
 ```
 ## 추가
