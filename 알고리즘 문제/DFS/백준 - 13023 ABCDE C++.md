@@ -49,11 +49,11 @@ int main(){
     cin >> n >> m;
     
     // 초기화
-    arrive = false;
+    arrive = false;  // 도착 전 상태
     a.resize(n);  
-    visited = vector<bool>(n, false);
+    visited = vector<bool>(n, false);  
         
-    for(int i = 0; i < m; i++){
+    for(int i = 0; i < m; i++){  관계 수 m 만큼 친구 s와 e를 입력받아줌
         int s, e;
         cin >> s >> e;
         
@@ -62,32 +62,32 @@ int main(){
         a[e].push_back(s);
     }
     
-    for(int i = 0; i < n; i++){
-        DFS(i, 1);
-        if(arrive) break;
+    for(int i = 0; i < n; i++){  // 학생 수 n 만큼 DFS 알고리즘 반복
+        DFS(i, 1);  
+        if(arrive) break;  // 만약에 도착이면 break
     }
     
-    if(arrive){
-        cout << 1 << '\n';
+    if(arrive){  // 결과 출력
+        cout << 1 << '\n';  
     }
     else{
         cout << 0 << '\n';
     }
 }    
 
-void DFS(int now, int depth){
-    if(depth == 5 || arrive){
+void DFS(int now, int depth){  // DFS 알고리즘 구현
+    if(depth == 5 || arrive){  // 만약 최대깊이인 5이거나 도착상태라면 바로 return
         arrive = true;
         return;
     }
-    visited[now] = true;
+    visited[now] = true;  // 앞선 조건이 아니라면 현재 주소에 방문기록 표시
     
-    for(int i : a[now]){  
-        if(!visited[i]){  // 방문하지 않았다면, visited = false
-            DFS(i, depth + 1);
+    for(int i : a[now]){  // 인접리스트의 now 주소에 있는 값들을 순서대로 꺼내옴   
+        if(!visited[i]){  // 만약 방문하지 않았다면 DFS 함수 재귀호출
+            DFS(i, depth + 1);  // 깊이 + 1
         }
     }
-    visited[now] = false;   
+    visited[now] = false;   방문기록 초기화
 }
 ```
 ## 추가
