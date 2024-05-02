@@ -8,7 +8,7 @@
 
 1. 백준 [단계별로 풀어보기] 1~12단계 풀어보면서 문법 익히기(1.입출력 ~ 12.브루트포스) [https://www.acmicpc.net/](https://www.acmicpc.net/step)
 
-2. 인프런 C++ 알고리즘 강의 듣기(자료구조, 알고리즘) [Do it! 알고리즘 코딩테스트 with C++](https://www.inflearn.com/course/%EB%91%90%EC%9E%87-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%BD%94%EB%94%A9%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%94%A8%EC%81%A0%EC%81%A0/dashboard)
+2. Do It 알고리즘 코딩 테스트 교재로 공부 (시간 복잡도, 디버깅, 자료구조, 정렬, 탐색, 그리디, 정수론, 그래프, 트리, 조합, 동적 계획법, 기하)
    
    0순위: 구현, 스택&큐  
    1순위: DP, 그리디, DFS&BFS, 정렬, 이분 탐색
