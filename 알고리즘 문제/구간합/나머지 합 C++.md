@@ -35,37 +35,36 @@ int main(){
     
     int n, m;
     cin >> n >> m;
-    vector<long> s(n, 0);
-    vector<long> c(m, 0);
-    long answer = 0;  
-    cin >> s[0];  
+    vector<long> s(n, 0);  // n개의 수 저장
+    vector<long> c(m, 0);  // 나머지 값마다 카운트 저장
+    long answer = 0;  // 쌍의 개수 카운트
+    cin >> s[0];  // 구간 합 처음 값
     
     for(int i = 1; i < n; i++){
         int temp = 0;
         cin >> temp;
-        s[i] = s[i-1] + temp;
+        s[i] = s[i-1] + temp;  // 구간 합 공식
     }
     
     for(int i = 0; i < n; i++){
-        int reminder = s[i] % m;
+        int reminder = s[i] % m;  // 나머지 연산 값 저장
         
-        if(reminder == 0){
+        if(reminder == 0){  // 나머지가 0일 시 카운트
             answer++;
         }
         
-        c[reminder]++;
+        c[reminder]++;  // 나머지 값마다 카운트
     }
     
-    for(int i = 0; i < m; i++){
-        if(c[i] > 1){
-            answer += (c[i] * (c[i] - 1) / 2);
+    for(int i = 0; i < m; i++){  
+        if(c[i] > 1){  // 나머지 카운트의 개수가 1 이상일 때
+            answer += (c[i] * (c[i] - 1) / 2);  // 조합(nCr): n개에서 2개를 뽑는 경우의 수 
         }
     }
     cout << answer << '\n';
 }
-
 ```
 ## 추가
-
+나머지 값으로 변경된 합 배열에서 s[i]와 s[j]의 나머지가 같으면 원본 배열에서 i+1부터 j까지의 구간 합이 M으로 나누어떨어지는 구간
 
 
