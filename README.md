@@ -14,11 +14,11 @@
 
    - 강의 들은 후 유형별 문제풀이(백준)
    
-4. 실전대비 프로그래머스 문제풀이 https://programmers.co.kr/
+3. 실전대비 프로그래머스 문제풀이 https://programmers.co.kr/
    - LEVEL1 부터 뒷페이지 → 앞페이지 순으로 문제풀이
    - 굳이 LEVEL4까지 풀 필요없음
 
-5. 백준 골드 OR 프로그래머스 LEVEL3 풀 정도로 실력 업그레이드
+4. 백준 골드 OR 프로그래머스 LEVEL3 풀 정도로 실력 업그레이드
 ![image](https://github.com/khw274/Coding-Test/assets/125671828/46cc8865-5dc2-4474-ac35-c3904670ca39)
 
 
