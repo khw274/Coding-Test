@@ -30,7 +30,7 @@ D는 E와 친구다.
 1
 ```
 ## 코드 풀이
-```
+```c++
 #include <iostream>
 #include <vector>
 using namespace std;
