@@ -23,7 +23,7 @@ Ax+By=C를 만족하는 x, y를 공백으로 구분해 출력한다. 문제의 �
 3 0
 ```
 ## 코드 풀이
-```
+```c++
 #include <iostream>
 #include <vector>
 using namespace std;
