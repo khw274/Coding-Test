@@ -26,7 +26,7 @@
 1 2 3 4
 ```
 ## 코드 풀이
-```
+```c++
 #include <iostream>
 #include <queue>
 #include <vector>
