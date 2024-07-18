@@ -27,21 +27,24 @@ int main(){
 ```python
 def main():
     import sys
-    input = sys.stdin.read
-    data = input().split()
     
-    n = int(data[0])
-    numbers = data[1]
+    input = sys.stdin.read  # 표준 입력으로부터 모든 데이터를 읽어오는 함수를 input 변수에 할당
+    data = input().split()  # 공백을 기준으로 나누어 리스트에 저장(숫자의 개수와 숫자)
     
-    sum = 0
+    n = int(data[0]);  # 입력된 숫자의 개수를 정수형으로 n에 저장
     
+    numbers = data[1];  # 입력된 숫자를 문자열 형태로 numbers에 저장
+    
+    sum = 0;
+    
+    # numbers 문자열의 각 문자를 순회하며 숫자로 변환하고 sum에 더함
     for i in range(len(numbers)):
-        sum += int(numbers[i])
-    
+        sum += int(numbers[i])  # 정수형으로 변환
+        
     print(sum)
-
+    
 if __name__ == "__main__":
-    main()
+    main()  # 메인 함수를 호출해 프로그램 실행
 ```
 ## 설명
 ### 입출력 속도 최적화:
